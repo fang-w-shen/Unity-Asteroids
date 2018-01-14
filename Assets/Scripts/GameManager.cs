@@ -9,10 +9,14 @@ public class GameManager : MonoBehaviour {
     public float delay;
     public float startDelay;
     public float waveWait;
+    public GUIText scoreText;
+    private int score;
 
     void Start()
     {
         StartCoroutine(spawnAsteroid());
+        score = 0;
+        UpdateScore();
     }
 
 
@@ -33,4 +37,14 @@ public class GameManager : MonoBehaviour {
 
         }
     }
+    public void AddScore (int newScoreValue)
+    {
+        score += newScoreValue;
+        UpdateScore();
+    }
+    void UpdateScore()
+    {
+        scoreText.text = "Score: " + score;
+    }
+    
 }

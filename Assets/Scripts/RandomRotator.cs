@@ -5,9 +5,9 @@ using UnityEngine;
 public class RandomRotator : MonoBehaviour {
 
     public float tumble;
-    public Rigidbody rigidbody;
+    public Rigidbody rb;
     void Start()
     {
-        rigidbody.angularVelocity = Random.insideUnitSphere * tumble; 
+        rb.angularVelocity = Random.insideUnitSphere * tumble; 
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 [System.Serializable]
+[RequireComponent(typeof(AudioSource))]
 public class Boundary
 {
     public float xMin, xMax, zMin, zMax;
@@ -23,8 +24,9 @@ public class PlayerController : MonoBehaviour {
         {
             nextFire = Time.time + fireRate;
             Instantiate(shot, transform.position, transform.rotation);
+            AudioSource audio = GetComponent<AudioSource>();
 
-            // create code here that animates the newProjectile
+            audio.Play();
 
         }
     }
