@@ -12,6 +12,22 @@ public class PlayerController : MonoBehaviour {
     public float speed;
     public float tilt;
     public Boundary boundary;
+    public GameObject shot;
+    public Transform shotSpawn;
+    public float fireRate;
+    private float nextFire;
+    void Update()
+    {
+
+        if ((Input.GetButton("Fire1") || Input.GetButton("Jump"))&& Time.time > nextFire)
+        {
+            nextFire = Time.time + fireRate;
+            Instantiate(shot, transform.position, transform.rotation);
+
+            // create code here that animates the newProjectile
+
+        }
+    }
     void FixedUpdate()
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
