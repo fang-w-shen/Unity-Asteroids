@@ -51,16 +51,17 @@ public class GameManager : MonoBehaviour {
                 Quaternion spawnRotation = Quaternion.identity;
                 Instantiate(asteroid, spawnPosition, spawnRotation);
                 yield return new WaitForSeconds(delay);
-
+                if (gameOver)
+                {
+                    yield return new WaitForSeconds(2f);
+                    restartText.text = "Press 'R' to Restart";
+                    restart = true;
+                    break;
+                }
             }
             hazardCount += 1;
             yield return new WaitForSeconds(waveWait);
-            if (gameOver)
-            {
-                restartText.text = "Press 'R' to Restart";
-                restart = true;
-                break;
-            }
+
         }
     }
     public void AddScore (int newScoreValue)

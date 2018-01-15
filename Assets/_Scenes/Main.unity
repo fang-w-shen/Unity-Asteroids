@@ -235,6 +235,7 @@ MonoBehaviour:
   - {fileID: 1313926695736304, guid: 06d872526e5f56048956bded6682f798, type: 2}
   - {fileID: 1443375089582914, guid: dabf4f26a8f3e62488d43be54b0b012f, type: 2}
   - {fileID: 1214971418269656, guid: 3060d27126f785d489a1806c379404d2, type: 2}
+  - {fileID: 1019079959862754, guid: 41c60a48df6ed5f45aa9589bab9e300a, type: 2}
   spawnValues: {x: 6, y: 0, z: 16}
   hazardCount: 10
   delay: 0.5
@@ -349,7 +350,7 @@ GameObject:
   - component: {fileID: 554281591}
   m_Layer: 0
   m_Name: Boundary
-  m_TagString: Untagged
+  m_TagString: Boundary
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1313,3 +1314,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99f549f7735e1d244893896380c597f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scrollSpeed: -0.15
+  tileSizeZ: 25
